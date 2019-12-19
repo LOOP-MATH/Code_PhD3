@@ -1,0 +1,1 @@
+Algorithm     Fun,        Gap,       Num_Grad,     Num_Prox,     Time_iter,  Time_stop
