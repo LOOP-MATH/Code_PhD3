@@ -17,7 +17,7 @@ Max_grad_num = 30*n;
 Max_prox_num = 1e4;
 eps = 1e-3;
 
-fid = fopen('C:\Users\Kaitu\Desktop\phd3_SDCA\SDCA\Results\Tables\Result_PCA_a9a.txt','w');
+fid = fopen('C:\Users\Kaitu\Desktop\Phd Papers\Paper 3-stochastic methods_phd3\phd3_SDCA\SDCA\Code_PhD3\Results\Tables\Result_PCA_a9a.txt','w');
 fprintf(fid,'Algorithm     Fun,        Gap,       Num_Grad,     Num_Prox,     Time_iter,  Time_stop\r\n');
 for xlength = 1:2
     x0    = X0(:,xlength);
