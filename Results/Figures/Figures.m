@@ -23,7 +23,7 @@ for i = 1:5
     yh = ylabel( '$\|\mathcal{P}(\bar{\omega}_i, \frac{1}{\lambda_0}(\omega_i -\bar{\omega}_{i}), 1)\|$', 'FontSize', 14, 'FontWeight', 'bold' );
     set(yh,'Interpreter','latex');
     
-    h = legend( { 'VRSPA','Algorithm 2'},'location','NorthEast', 'FontSize',16, 'FontWeight', 'bold' );
+    h = legend( { 'VRSPA','Ëã·¨ 4.2'},'location','NorthEast', 'FontSize',16, 'FontWeight', 'bold' );
     set(h,'Interpreter','latex');
     set( gca, 'FontSize',  16, 'FontWeight', 'bold','linewidth',1.08 ) ;
 end
@@ -51,7 +51,7 @@ for i = 1:5
     yh = ylabel( '$\|\mathcal{P}(\bar{\omega}_i, \frac{1}{\lambda_0}(\omega_i -\bar{\omega}_{i}), 1)\|$', 'FontSize', 14, 'FontWeight', 'bold' );
     set(yh,'Interpreter','latex');
     
-    h = legend( { 'VRSPA','Algorithm 2'},'location','NorthEast', 'FontSize',16, 'FontWeight', 'bold' );
+    h = legend( { 'VRSPA','Ëã·¨ 4.2'},'location','NorthEast', 'FontSize',16, 'FontWeight', 'bold' );
     set(h,'Interpreter','latex');
     set( gca, 'FontSize',  16, 'FontWeight', 'bold','linewidth',1.08 ) ;
 end

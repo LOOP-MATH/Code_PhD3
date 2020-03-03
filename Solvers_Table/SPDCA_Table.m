@@ -1,4 +1,5 @@
-function [output, lambda_pena, Num_Grad_index] = SPDCA_Table(n,X,x0,Max_grad_num,Max_prox_num,Prox)
+function [output, lambda_pena, Num_Grad_index] = SPDCA_Table...
+    (n,X,x0,Max_grad_num,Max_prox_num,Prox)
 %=========================================
 % Readme:
 % Optimization model
@@ -39,9 +40,10 @@ gamma       = lambda_pena/(2*L*lambda_pena+1);
 TT          = [];
 w           = [];
 Num_Grad_index = [];
+Num_Grad_index(1) = 0;
 w(:,1)      = x0;
 TT(1)       = 0;
-Num_Grad_index(1) = 0;
+
 wk_old_old  = x0;
 wk_old      = x0;
 %===============================================

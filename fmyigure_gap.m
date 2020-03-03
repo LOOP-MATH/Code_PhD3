@@ -5,25 +5,30 @@ close all
 for i = 1:5
     figure(i)
     if i == 1
-        load('CappL1_Alla9a.mat')
+        load('CappL1_Alla9a_SS.mat')
     elseif i == 2
-        load('L1L2_Alla9a.mat')
+        load('L1L2_Alla9a_SS.mat')
     elseif i == 3
-        load('LSP_Alla9a.mat')
+        load('LSP_Alla9a_SS.mat')
     elseif  i == 4
-        load('MCP_Alla9a.mat')
+        load('MCP_Alla9a_SS.mat')
     else
-        load('SCAD_Alla9a.mat')
+        load('SCAD_Alla9a_SS.mat')
     end
-    semilogy(TimVRSPA,GapVRSPA,'-r','LineWidth', 2);
+    semilogy(TimVRSPA,FunVRSPA,'-r','LineWidth', 2);
     hold on
-    semilogy(TimSPDCA,GapSPDCA,'-b','LineWidth', 2);
+    semilogy(TimSPDCA,FunSPDCA,'-b','LineWidth', 2);
+    hold on
+    semilogy(TimSSDCSPG,FunSSDCSPG,'+g','LineWidth', 2);
+    hold on
+    semilogy(TimSSPDCA,FunSSPDCA,'*y','LineWidth', 2);
+    
     xh = xlabel( 'time (s)', 'FontSize', 16, 'FontWeight', 'bold' );
     set(xh,'Interpreter','latex');
-    yh = ylabel( '$\|\mathcal{P}(\bar{\omega}_i, \frac{1}{\lambda_0}(\omega_i -\bar{\omega}_{i}), 1)\|$', 'FontSize', 14, 'FontWeight', 'bold' );
+    yh = ylabel( '$f(\omega_k)\|$', 'FontSize', 14, 'FontWeight', 'bold' );
     set(yh,'Interpreter','latex');
     
-    h = legend( { 'Algorithm 1','Algorithm 2'},'location','NorthEast', 'FontSize',16, 'FontWeight', 'bold' );
+    h = legend( { 'VRSPA','SPIDER-Moreau-PDCA', 'SSDCSPG', 'SPIDER-Inexact-PDCA' },'location','NorthEast', 'FontSize',16, 'FontWeight', 'bold' );
     set(h,'Interpreter','latex');
     set( gca, 'FontSize',  16, 'FontWeight', 'bold','linewidth',1.08 ) ;
 end
@@ -33,25 +38,30 @@ end
 for i = 1:5
     figure(i+5)
     if i == 1
-        load('CappL1_Allmnist.mat')
+        load('CappL1_Allmnist_SS.mat')
     elseif i == 2
-        load('L1L2_Allmnist.mat')
+        load('L1L2_Allmnist_SS.mat')
     elseif i == 3
-        load('LSP_Allmnist.mat')
+        load('LSP_Allmnist_SS.mat')
     elseif  i == 4
-        load('MCP_Allmnist.mat')
+        load('MCP_Allmnist_SS.mat')
     else
-        load('SCAD_Allmnist.mat')
+        load('SCAD_Allmnist_SS.mat')
     end
-    semilogy(TimVRSPA,GapVRSPA,'-r','LineWidth', 2);
+    semilogy(TimVRSPA,FunVRSPA,'-r','LineWidth', 2);
     hold on
-    semilogy(TimSPDCA,GapSPDCA,'-b','LineWidth', 2);
+    semilogy(TimSPDCA,FunSPDCA,'-b','LineWidth', 2);
+    hold on
+    semilogy(TimSSDCSPG,FunSSDCSPG,'+g','LineWidth', 2);
+    hold on
+    semilogy(TimSSPDCA,FunSSPDCA,'*y','LineWidth', 2);
+    
     xh = xlabel( 'time (s)', 'FontSize', 16, 'FontWeight', 'bold' );
     set(xh,'Interpreter','latex');
-    yh = ylabel( '$\|\mathcal{P}(\bar{\omega}_i, \frac{1}{\lambda}(\omega_i -\bar{\omega}_{i}), 1)\|$', 'FontSize', 14, 'FontWeight', 'bold' );
+    yh = ylabel( '$f(\omega_k)\|$', 'FontSize', 14, 'FontWeight', 'bold' );
     set(yh,'Interpreter','latex');
     
-    h = legend( { 'Algorithm 1','Algorithm 2'},'location','NorthEast', 'FontSize',16, 'FontWeight', 'bold' );
+    h = legend( { 'VRSPA','SPIDER-Moreau-PDCA', 'SSDCSPG', 'SPIDER-Inexact-PDCA' },'location','NorthEast', 'FontSize',16, 'FontWeight', 'bold' );
     set(h,'Interpreter','latex');
     set( gca, 'FontSize',  16, 'FontWeight', 'bold','linewidth',1.08 ) ;
 end
